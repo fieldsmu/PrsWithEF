@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PrsEF {
-	public class PrsDbContext : DbContext {
+	internal class PrsDbContext : DbContext {
 
 		public PrsDbContext() : base() {
 
@@ -15,5 +15,7 @@ namespace PrsEF {
 		public DbSet<User> Users { get; set; }
 		public DbSet<Vendor> Vendors { get; set; }
 		public DbSet<Product> Products { get; set; }
+		public DbSet<PurchaseRequest> PurchaseRequests { get; set; }
+		public DbSet<PRLineItem> PRLineItems { get; set; }
 	}
 }
